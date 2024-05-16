@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient"
+        tools:context=".ui.ProfileActivity">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Profile"
+                android:textColor="@color/color_25282B"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnUpgrade"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/upgrade_btn_bg"
+                android:drawableStart="@drawable/ic_crown"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/inter_medium"
+                android:paddingHorizontal="10dp"
+                android:text="@string/upgrade"
+                android:textColor="@color/color_25282B"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_settings_icon" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llToolbar"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+
+                    android:src="@drawable/placeholder_img"
+                    android:transitionName="Robot"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearance="@style/CornerSize50Percent" />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivPremium"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@color/white"
+                    android:src="@drawable/ic_circle_crown"
+                    android:visibility="visible"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintStart_toStartOf="@+id/ivProfile"
+                    app:layout_constraintTop_toTopOf="@+id/ivProfile"
+                    app:shapeAppearance="@style/CornerSize50Percent" />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivCamera"
+                    android:layout_width="30dp"
+                    android:layout_height="27dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:src="@drawable/ic_photo_camera"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivProfile"
+                    app:layout_constraintEnd_toEndOf="@+id/ivProfile"
+                     />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/tvMySubscription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_subscription"
+                android:fontFamily="@font/inter_medium"
+                android:textSize="16sp"
+                android:layout_marginTop="35dp"
+                android:visibility="gone"
+                android:layout_marginHorizontal="20dp"
+                android:textColor="@color/color_255CCB"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:layout_marginTop="23.5dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@color/color_9EA0A2" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="23.5dp"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/llEtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="2dp"
+                        android:layout_marginVertical="2dp"
+                        android:background="@drawable/btn_bg"
+                        android:backgroundTint="@color/white"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/inter_medium"
+                        android:hint="@string/name"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="5dp"
+                        android:textColor="@color/color_25282B"
+                        android:textColorHint="@color/color_9EA0A2"
+                        android:textSize="12sp"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="20dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clFilledName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/llEtNameFilled"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/btn_bg"
+                        android:backgroundTint="@color/white"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/inter_medium"
+                        android:hint="@string/name"
+                        android:paddingHorizontal="20dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/color_9EA0A2"
+                        android:textColorHint="@color/color_25282B"
+                        android:textSize="14sp"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etNameFilled"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="Jhon Den"
+                            android:textColor="@color/color_9EA0A2" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/tvEditName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/call_grey_bg"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/inter_medium"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="8dp"
+                        android:text="Edit"
+                        android:textColor="@color/color_25282B"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/llEtNameFilled"
+                        app:layout_constraintTop_toTopOf="@+id/llEtNameFilled" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingVertical="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/llEtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="2dp"
+                        android:layout_marginVertical="2dp"
+                        android:background="@drawable/btn_bg"
+                        android:backgroundTint="@color/white"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/inter_medium"
+                        android:hint="@string/email"
+                        android:paddingHorizontal="20dp"
+                        android:textColor="@color/color_25282B"
+                        android:textColorHint="@color/color_9EA0A2"
+                        android:textSize="12sp"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="20dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clFilledEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingVertical="10dp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/llEtEmailFilled"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/btn_bg"
+                        android:backgroundTint="@color/white"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/inter_medium"
+                        android:hint="@string/email"
+                        android:paddingHorizontal="20dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/color_9EA0A2"
+                        android:textColorHint="@color/color_25282B"
+                        android:textSize="14sp"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmailFilled"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="john@gmail.com"
+                            android:textColor="@color/color_9EA0A2" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/tvEditEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/call_grey_bg"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/inter_medium"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="8dp"
+                        android:text="Edit"
+                        android:textColor="@color/color_25282B"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/llEtEmailFilled"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/llEtEmailFilled" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llFormField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/btnChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_bg"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Change Password"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:initialCornerAngle="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etPassword"
+                app:spinning_bar_color="#FFF"
+                app:spinning_bar_padding="6dp"
+                app:spinning_bar_width="4dp" />
+
+            <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/btnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="135dp"
+                android:background="@drawable/btn_bg"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Update"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:initialCornerAngle="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etPassword"
+                app:spinning_bar_color="#FFF"
+                app:spinning_bar_padding="6dp"
+                app:spinning_bar_width="4dp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </RelativeLayout>
+</layout>

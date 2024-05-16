@@ -1,0 +1,340 @@
+# this is an auto generated file. This will be overwritten
+
+mutation CreateKnowYourDay(
+  $input: CreateKnowYourDayInput!
+  $condition: ModelKnowYourDayConditionInput
+) {
+  createKnowYourDay(input: $input, condition: $condition) {
+    id
+    userId
+    healthCount
+    productivityCount
+    moodCount
+    createdAt
+    updatedAt
+    date
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdateKnowYourDay(
+  $input: UpdateKnowYourDayInput!
+  $condition: ModelKnowYourDayConditionInput
+) {
+  updateKnowYourDay(input: $input, condition: $condition) {
+    id
+    userId
+    healthCount
+    productivityCount
+    moodCount
+    createdAt
+    updatedAt
+    date
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeleteKnowYourDay(
+  $input: DeleteKnowYourDayInput!
+  $condition: ModelKnowYourDayConditionInput
+) {
+  deleteKnowYourDay(input: $input, condition: $condition) {
+    id
+    userId
+    healthCount
+    productivityCount
+    moodCount
+    createdAt
+    updatedAt
+    date
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation CreateTasks(
+  $input: CreateTasksInput!
+  $condition: ModelTasksConditionInput
+) {
+  createTasks(input: $input, condition: $condition) {
+    id
+    title
+    userId
+    emailOrPhone
+    description
+    date
+    time
+    reminder
+    repeatType
+    isImportant
+    createdAt
+    updatedAt
+    repeatDays
+    isCompleted
+    taskType
+    listGroupId
+    customTime
+    repeatCount
+    endDate
+    notiRequestCode
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdateTasks(
+  $input: UpdateTasksInput!
+  $condition: ModelTasksConditionInput
+) {
+  updateTasks(input: $input, condition: $condition) {
+    id
+    title
+    userId
+    emailOrPhone
+    description
+    date
+    time
+    reminder
+    repeatType
+    isImportant
+    createdAt
+    updatedAt
+    repeatDays
+    isCompleted
+    taskType
+    listGroupId
+    customTime
+    repeatCount
+    endDate
+    notiRequestCode
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeleteTasks(
+  $input: DeleteTasksInput!
+  $condition: ModelTasksConditionInput
+) {
+  deleteTasks(input: $input, condition: $condition) {
+    id
+    title
+    userId
+    emailOrPhone
+    description
+    date
+    time
+    reminder
+    repeatType
+    isImportant
+    createdAt
+    updatedAt
+    repeatDays
+    isCompleted
+    taskType
+    listGroupId
+    customTime
+    repeatCount
+    endDate
+    notiRequestCode
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation CreateListGroup(
+  $input: CreateListGroupInput!
+  $condition: ModelListGroupConditionInput
+) {
+  createListGroup(input: $input, condition: $condition) {
+    id
+    name
+    createdAt
+    updatedAt
+    userId
+    title
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdateListGroup(
+  $input: UpdateListGroupInput!
+  $condition: ModelListGroupConditionInput
+) {
+  updateListGroup(input: $input, condition: $condition) {
+    id
+    name
+    createdAt
+    updatedAt
+    userId
+    title
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeleteListGroup(
+  $input: DeleteListGroupInput!
+  $condition: ModelListGroupConditionInput
+) {
+  deleteListGroup(input: $input, condition: $condition) {
+    id
+    name
+    createdAt
+    updatedAt
+    userId
+    title
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation CreateWaterInTake(
+  $input: CreateWaterInTakeInput!
+  $condition: ModelWaterInTakeConditionInput
+) {
+  createWaterInTake(input: $input, condition: $condition) {
+    id
+    date
+    count
+    userId
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdateWaterInTake(
+  $input: UpdateWaterInTakeInput!
+  $condition: ModelWaterInTakeConditionInput
+) {
+  updateWaterInTake(input: $input, condition: $condition) {
+    id
+    date
+    count
+    userId
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeleteWaterInTake(
+  $input: DeleteWaterInTakeInput!
+  $condition: ModelWaterInTakeConditionInput
+) {
+  deleteWaterInTake(input: $input, condition: $condition) {
+    id
+    date
+    count
+    userId
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation CreateUser(
+  $input: CreateUserInput!
+  $condition: ModelUserConditionInput
+) {
+  createUser(input: $input, condition: $condition) {
+    id
+    name
+    email
+    picUrl
+    isSocialLoggedIn
+    isSubscriptionPurchased
+    subscriptionType
+    userId
+    isNotificationEnabled
+    isReminderEnabled
+    isEmailVerified
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdateUser(
+  $input: UpdateUserInput!
+  $condition: ModelUserConditionInput
+) {
+  updateUser(input: $input, condition: $condition) {
+    id
+    name
+    email
+    picUrl
+    isSocialLoggedIn
+    isSubscriptionPurchased
+    subscriptionType
+    userId
+    isNotificationEnabled
+    isReminderEnabled
+    isEmailVerified
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeleteUser(
+  $input: DeleteUserInput!
+  $condition: ModelUserConditionInput
+) {
+  deleteUser(input: $input, condition: $condition) {
+    id
+    name
+    email
+    picUrl
+    isSocialLoggedIn
+    isSubscriptionPurchased
+    subscriptionType
+    userId
+    isNotificationEnabled
+    isReminderEnabled
+    isEmailVerified
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}

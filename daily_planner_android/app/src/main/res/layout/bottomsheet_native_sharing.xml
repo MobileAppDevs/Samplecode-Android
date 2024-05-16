@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_bg"
+    android:orientation="vertical"
+    android:padding="20dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share"
+        android:fontFamily="@font/inter_medium"
+        android:textSize="14sp"
+        android:textColor="@color/color_25282B"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:src="@drawable/ic_calender_tick"
+        android:alpha="0.1"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Anyone with this link and a Daily Planner account can join and edit the list."
+        android:fontFamily="@font/inter_regular"
+        android:textSize="12sp"
+        android:lineHeight="20dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/color_25282B"/>
+
+    <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
+        android:id="@+id/btnShare"
+        android:layout_width="230dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/inter_semibold"
+        android:drawableStart="@drawable/ic_share"
+        android:drawableTint="@color/white"
+        android:drawablePadding="-50dp"
+        android:paddingStart="60dp"
+        android:text="Invite via..."
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:initialCornerAngle="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvForgotPassword"
+        app:spinning_bar_color="#FFF"
+        app:spinning_bar_padding="6dp"
+        app:spinning_bar_width="4dp" />
+</androidx.appcompat.widget.LinearLayoutCompat>

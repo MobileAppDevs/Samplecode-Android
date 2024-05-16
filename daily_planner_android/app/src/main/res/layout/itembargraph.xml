@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@+id/labelTextView"
+        app:layout_constraintEnd_toEndOf="@+id/labelTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/labelTextView"
+        android:layout_weight="1">
+        <LinearLayout
+            android:id="@+id/llView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/transparentView"
+                android:layout_width="10dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <View
+                android:id="@+id/coloredView"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center"
+                android:background="@color/color_25282B" />
+
+        </LinearLayout>
+        <LinearLayout
+            app:layout_constraintBottom_toBottomOf="@+id/llView"
+            app:layout_constraintTop_toTopOf="@+id/llView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <View
+                android:id="@+id/transparentExcellentView"
+                android:layout_width="10dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+            <View
+                android:id="@+id/excellentView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/bordered_bg" />
+        </LinearLayout>
+        <LinearLayout
+            app:layout_constraintBottom_toBottomOf="@+id/llView"
+            app:layout_constraintTop_toTopOf="@+id/llView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <View
+                android:id="@+id/transparentGoodView"
+                android:layout_width="10dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+            <View
+                android:id="@+id/goodView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/bordered_bg" />
+        </LinearLayout>
+        <LinearLayout
+            app:layout_constraintBottom_toBottomOf="@+id/llView"
+            app:layout_constraintTop_toTopOf="@+id/llView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <View
+                android:id="@+id/transparentPoorView"
+                android:layout_width="10dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+            <View
+                android:id="@+id/poorView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/bordered_bg" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/labelTextView"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/inter_medium"
+        android:textSize="11sp"
+        android:text="Label" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/navigation_task">
+
+    <fragment
+        android:id="@+id/navigation_task"
+        android:name="com.enkefalostechnologies.calendarpro.ui.fragment.TaskFragment"
+        android:label="fragment_task"
+        tools:layout="@layout/fragment_task">
+        <action
+            android:id="@+id/action_navigation_task_to_navigation_hub"
+            app:destination="@id/navigation_hub" />
+        <action
+            android:id="@+id/action_navigation_task_to_navigation_task"
+            app:destination="@id/navigation_task" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_hub"
+        android:name="com.enkefalostechnologies.calendarpro.ui.fragment.HubFragment"
+        android:label="fragment_hub"
+        tools:layout="@layout/fragment_hub">
+        <action
+            android:id="@+id/action_navigation_hub_to_navigation_task"
+            app:destination="@id/navigation_task"
+            app:popUpTo="@id/bottom_navigation"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_navigation_hub_to_navigation_setting"
+            app:destination="@id/navigation_setting"
+            app:popUpTo="@id/bottom_navigation"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_list"
+        android:name="com.enkefalostechnologies.calendarpro.ui.fragment.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_navigation_list_to_navigation_list_task"
+            app:destination="@id/navigation_list_task"
+            app:popUpTo="@id/bottom_navigation"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_navigation_list_task_to_navigation_list"
+            app:destination="@id/navigation_list"
+            app:popUpTo="@id/bottom_navigation"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_setting"
+        android:name="com.enkefalostechnologies.calendarpro.ui.fragment.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_list_task"
+        android:name="com.enkefalostechnologies.calendarpro.ui.fragment.ListTaskFragment"
+        android:label="fragment_list_task"
+        tools:layout="@layout/fragment_list_task">
+        <action
+            android:id="@+id/action_navigation_list_task_to_navigation_list"
+            app:destination="@id/navigation_list"
+            app:popUpTo="@id/bottom_navigation"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+
+</navigation>

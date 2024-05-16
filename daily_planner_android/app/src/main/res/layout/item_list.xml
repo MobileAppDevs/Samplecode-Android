@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="22dp"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/setting_btn_bg"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/listName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="List 01"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter_medium"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/color_25282B"
+                android:paddingHorizontal="20dp"
+                android:gravity="center_vertical"
+                />
+            <TextView
+                android:id="@+id/tvTaskCount"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="0/0"
+                android:layout_weight="2.1"
+                android:fontFamily="@font/inter_medium"
+                android:textSize="14sp"
+                android:textColor="@color/color_25282B"
+                android:paddingHorizontal="10dp"
+                android:gravity="center_vertical|end"
+                />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_right"/>
+        </LinearLayout>
+</layout>

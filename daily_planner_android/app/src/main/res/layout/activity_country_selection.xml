@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.country_selection.CountrySelectionActivity"
+        android:background="@color/color_bg">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="20dp"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/select_countries"
+            android:textColor="@color/color_171B1E"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/ibSearch"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_search_c"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView4" />
+        <ImageButton
+            android:id="@+id/ibCross"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_cancel"
+            android:layout_marginEnd="20dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView4" />
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:backgroundTint="@color/white"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="20dp"
+            android:fontFamily="@font/inter_medium"
+            android:hint="Search"
+            android:inputType="text"
+            android:visibility="gone"
+            android:imeOptions="actionDone"
+            android:layout_marginVertical="10dp"
+            android:minHeight="41dp"
+            android:layout_marginHorizontal="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:textColor="@color/color_C8C8C8"
+            android:textColorHint="@color/color_C8C8C8"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCountry"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:nestedScrollingEnabled="false"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/etSearch"
+            tools:layout_editor_absoluteX="0dp"
+            tools:listitem="@layout/item_country" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="72dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="40dp">
+
+            <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/btnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="@color/btn_enable_disable"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:initialCornerAngle="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvForgotPassword"
+                app:spinning_bar_color="#FFF"
+                app:spinning_bar_padding="6dp"
+                app:spinning_bar_width="4dp"/>
+
+            <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Skip for now"
+                android:textAllCaps="false"
+                android:textColor="@color/color_25282B"
+                android:textSize="14sp"
+                app:initialCornerAngle="22dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:spinning_bar_color="#FFF"
+                app:spinning_bar_padding="6dp"
+                app:spinning_bar_width="4dp" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

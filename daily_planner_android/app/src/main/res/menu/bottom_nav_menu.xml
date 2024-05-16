@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_task"
+        android:icon="@drawable/task_selector"
+        android:title="@string/tasks" />
+
+    <item
+        android:id="@+id/navigation_hub"
+        android:icon="@drawable/hub_selector"
+        android:title="@string/activity_hub" />
+
+    <item
+        android:id="@+id/navigation_list"
+        android:icon="@drawable/list_selector"
+        android:title="@string/list" />
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/setting_selector"
+        android:title="@string/settings" />
+</menu>

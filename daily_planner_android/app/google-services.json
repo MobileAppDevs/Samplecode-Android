@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "584179564031",
+    "project_id": "calendar-pro-212ac",
+    "storage_bucket": "calendar-pro-212ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584179564031:android:1c377a8a5997649dbcbbca",
+        "android_client_info": {
+          "package_name": "enkefalos.calendar.planner.schedule"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3MkzzQ8bgIdH54lrlX7owbQpKb-4YnhQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
