@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/first_time_like"
+        />
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/merriweather_sans_regular"
+        android:gravity="start|center_vertical"
+        android:padding="8dp"
+        android:text="@string/txt_first_time_like_notification"
+        android:textColor="@color/color_161616"
+        android:textSize="14sp" />
+
+
+</LinearLayout>
+

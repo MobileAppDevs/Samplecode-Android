@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+rootProject.name = "Dating App"
+include ':app'
+include ':ccp'
+include ':pinentryedittext'
+include ':multiphotopicker'
+include ':RangeSeekBar'
+include ':cardstackview'
+include ':myFirestoreCharLibrary'
+include ':viewpagerdotsindicator'

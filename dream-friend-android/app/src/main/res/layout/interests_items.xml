@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSexualItem"
+        android:visibility="visible"
+        android:layout_weight="1"
+        android:textSize="13sp"
+        android:fontFamily="@font/merriweather_sans_regular"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="12dp"
+        android:background="@drawable/drawable_b1ce8e6ea_cr22dot5cffffff"
+        android:minHeight="47dp"
+        android:layout_marginHorizontal="7.5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvYourInterestsItem"
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:textSize="13sp"
+        android:fontFamily="@font/merriweather_sans_regular"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="12dp"
+        android:background="@drawable/drawable_b1ce8e6ea_cr22dot5cffffff"
+        android:minHeight="47dp"
+        android:layout_marginHorizontal="7.5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" />
+</androidx.appcompat.widget.LinearLayoutCompat>

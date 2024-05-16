@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llItem"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCountryCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/color_161616"
+            android:fontFamily="@font/merriweather_sans_regular"
+            android:text="(+91)"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCountryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/color_161616"
+            android:fontFamily="@font/merriweather_sans_regular"
+            android:text="India"
+            android:layout_marginStart="40dp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:layout_marginVertical="10dp"
+        android:background="@color/color_D4D4D4"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

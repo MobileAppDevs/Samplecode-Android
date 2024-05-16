@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="callTheme">#FFC629</color>
+    <color name="themeRed">#FFC629</color>
+    <color name="themeTopYellow">#FFC629</color>
+    <color name="themeBottomRed">#FFC629</color>
+
+    <color name="greyText">#747474</color>
+    <color name="_787676">#787676</color>
+    <color name="b4b4b4">#B4B4B4</color>
+    <color name="border_e8e6ea">#E8E6EA</color>
+    <color name="i_agree_description">#CC676767</color>
+    <color name="i_agree_title">#505050</color>
+    <color name="selected_items_bg">#FFF7F6</color>
+    <color name="b2000000">#B2000000</color>
+    <color name="f4f4f4">#F4F4F4</color>
+    <color name="_505050">#505050</color>
+    <color name="adafbb">#ADAFBB</color>
+    <color name="e94057">#FFC629</color>
+    <color name="ff533f">#FFC629</color>
+    <color name="_161616">#161616</color>
+    <color name="c1c0c9">#C1C0C9</color>
+    <color name="f14023">#FFC629</color>
+    <color name="ffc004">#FFC004</color>
+    <color name="dddddd">#DDDDDD</color>
+    <color name="_1a051d">#1A051D</color>
+    <color name="_4a4a4a">#4A4A4A</color>
+    <color name="_949397">#949397</color>
+    <color name="_9Da3AE">#9Da3AE</color>
+    <color name="_192252">#192252</color>
+    <color name="_848FAC">#848FAC</color>
+    <color name="F4F6F8">#F4F6F8</color>
+    <color name="FFDEAF">#FFDEAF</color>
+    <color name="F8C52C">#F8C52C</color>
+    <color name="_3a3939">#3A3939</color>
+    <color name="_958F8F">#958F8F</color>
+    <color name="_E1E1E1">#E1E1E1</color>
+
+
+
+<!-- new project colors-->
+    <color name="color_161616">#161616</color>
+    <color name="color_949494">#949494</color>
+    <color name="color_ED1C1D">#ED1C1D</color>
+    <color name="color_FFC629">#FFC629</color>
+    <color name="color_FFDB76">#FFDB76</color>
+    <color name="color_01A4FF">#01A4FF</color>
+    <color name="color_00B2FF">#00B2FF</color>
+    <color name="color_F4F4F4">#F4F4F4</color>
+    <color name="color_D4D4D4">#D4D4D4</color>
+    <color name="color_23B502">#23B502</color>
+    <color name="color_FFF4D4">#FFF4D4</color>
+    <color name="color_E4E4E4">#E4E4E4</color>
+    <color name="color_A4A4A4">#A4A4A4</color>
+    <color name="color_C4C4C4">#C4C4C4</color>
+    <color name="color_848484">#848484</color>
+    <color name="color_1aFFC629_a10">#1AFFC629</color>
+</resources>

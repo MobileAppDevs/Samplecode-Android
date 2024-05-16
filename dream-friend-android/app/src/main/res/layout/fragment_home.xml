@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_common_padding_horizontal"
+        tools:context=".ui.home.fragments.HomeFragment">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:src="@drawable/new_ic_reverse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBoost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:src="@drawable/new_ic_boost"
+            app:layout_constraintStart_toEndOf="@id/ivRefresh"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/new_ic_filter"
+            android:layout_marginEnd="18dp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/merriweather_sans_bold"
+            android:text="@string/app_name"
+            android:textColor="@color/color_FFC629"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tvNoDataFound"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:background="@drawable/new_rounded_border_grey_bg"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvHeading">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/new_ic_vector_filter" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/merriweather_sans_bold"
+                    android:text="@string/see_more_filter"
+                    android:textColor="@color/color_161616"
+                    android:textSize="26sp"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="@dimen/_common_padding_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/merriweather_sans_regular"
+                    android:text="@string/see_more_desc_filter"
+                    android:textColor="@color/color_949494"
+                    android:textSize="16sp"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnChangeFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34dp"
+                    android:layout_marginHorizontal="@dimen/_common_padding_horizontal"
+                    android:backgroundTint="@color/color_161616"
+                    android:fontFamily="@font/merriweather_sans_semi_bold"
+                    android:gravity="center|center_vertical"
+                    android:paddingVertical="15dp"
+                    android:text="@string/btn_change_filters"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:cornerRadius="10dp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/noMoreLikeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:background="@drawable/new_rounded_border_grey_bg"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvHeading">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/new_ic_swipe" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/merriweather_sans_bold"
+                    android:text="That's all your swipes!"
+                    android:textColor="@color/color_161616"
+                    android:textSize="26sp"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="@dimen/_common_padding_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/merriweather_sans_regular"
+                    android:text="Still looking? Upgrade to unlimited swipes with Dream Friend Premium"
+                    android:textColor="@color/color_949494"
+                    android:textSize="16sp"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGetMoreLikes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34dp"
+                    android:layout_marginHorizontal="@dimen/_common_padding_horizontal"
+                    android:backgroundTint="@color/color_161616"
+                    android:fontFamily="@font/merriweather_sans_semi_bold"
+                    android:gravity="center|center_vertical"
+                    android:paddingVertical="15dp"
+                    android:text="@string/btn_more_like_now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:cornerRadius="10dp" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnSubscriptionRequired"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="44dp"
+                    android:backgroundTint="@color/color_161616"
+                    android:fontFamily="@font/merriweather_sans_medium"
+                    android:gravity="center|center_vertical"
+                    android:paddingVertical="10dp"
+                    android:layout_marginHorizontal="@dimen/_common_padding_horizontal"
+                    android:text="No Subscription Required"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_161616"
+                    android:textSize="18sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <com.yuyakaido.android.cardstackview.CardStackView
+            android:id="@+id/swipeCard"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false">
+        </com.yuyakaido.android.cardstackview.CardStackView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

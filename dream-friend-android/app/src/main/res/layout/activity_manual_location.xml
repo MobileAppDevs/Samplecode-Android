@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.location_permissions.LocationPermissionActivity">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_backbtn_layout" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="@dimen/_common_padding_horizontal"
+            android:fontFamily="@font/merriweather_sans_semi_bold"
+            app:lineHeight="45sp"
+            android:text="@string/whats_your_location"
+            android:textSize="30sp"
+            android:textColor="@color/color_161616"
+            android:textAlignment="textStart" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="@font/merriweather_sans_regular"
+            app:lineHeight="24sp"
+            android:layout_marginHorizontal="@dimen/_common_padding_horizontal"
+            android:text="@string/manual_location_desc"
+            android:textSize="14sp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/color_949494"
+            android:textAlignment="textStart"/>
+         <androidx.appcompat.widget.AppCompatEditText
+             android:id="@+id/etText"
+             android:layout_width="match_parent"
+             android:layout_height="52dp"
+             android:layout_marginTop="24dp"
+             android:drawableTint="@color/color_949494"
+             android:drawableStart="@drawable/drawable_search_ic"
+             android:drawablePadding="10dp"
+             android:paddingHorizontal="10dp"
+             android:hint="Enter your city or town"
+             android:textColor="@color/color_161616"
+             android:textColorHint="@color/color_949494"
+             android:layout_marginHorizontal="@dimen/_common_padding_horizontal"
+             android:background="@drawable/cornered_by_grey"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLocations"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_location"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

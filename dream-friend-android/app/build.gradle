@@ -1,0 +1,139 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+    id 'kotlin-android-extensions'
+//    id 'dagger.hilt.android.plugin'
+    id 'com.google.dagger.hilt.android' version '2.41' apply false
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+}
+
+android {
+    namespace 'com.dream.friend'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.dream.friend"
+        minSdk 23
+        targetSdk 34
+        versionCode 9
+        versionName "1.9"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation project(":ccp")
+    implementation project(":pinentryedittext")
+    implementation project(":multiphotopicker")
+    implementation project(":RangeSeekBar")
+    implementation project(":cardstackview")
+    implementation project(":myFirestoreCharLibrary")
+    implementation project(":viewpagerdotsindicator")
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.databinding:databinding-runtime:7.4.0'
+    implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.9.5'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    implementation 'com.google.android.gms:play-services-auth:20.4.0'
+
+    //worker
+//    implementation 'androidx.work:work-runtime:2.7.1'
+    //Dagger Hilt
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
+    //Hilt
+    implementation 'com.google.dagger:hilt-android:2.44.2'
+    annotationProcessor 'com.google.dagger:hilt-compiler:2.44.2'
+    //Hilt with workManager
+//    implementation 'androidx.hilt:hilt-work:1.0.0'
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
+    implementation 'com.google.code.gson:gson:2.9.1'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.8.1'
+
+    //Image loading
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+
+
+    // Activity KTX for viewModels()
+    implementation "androidx.activity:activity-ktx:1.6.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+
+    //splash screen for targeting api 31
+    implementation "androidx.core:core-splashscreen:1.0.0"
+
+    //switch button
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+
+    //firebase
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+    implementation("com.google.firebase:firebase-appcheck-playintegrity")
+    implementation("com.google.firebase:firebase-appcheck-ktx")
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-auth-ktx:21.1.0'
+
+    //navigation
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.4+'
+
+    implementation 'com.github.simformsolutions:SSCustomBottomNavigation:3.4'
+
+    implementation 'io.agora.rtc:full-sdk:4.0.1'
+    implementation 'androidx.browser:browser:1.5.0'
+
+    implementation 'com.google.firebase:firebase-messaging:23.1.2'
+
+    //subscription
+    implementation 'com.android.billingclient:billing-ktx:6.0.1'
+//    implementation 'com.anjlab.android.iab.v3:library:2.0.3'
+
+    //emoji
+    implementation "com.vanniktech:emoji-ios:0.16.0"
+//    implementation "com.google.android.gms:play-services-safetynet:18.0.1"
+    //range seekbar
+    implementation 'com.github.MohammedAlaaMorsi:RangeSeekBar:1.0.6'
+//    implementation 'com.github.MohammedAlaaMorsi:RangeSeekBar:1.0.6'
+
+    //image picker
+    implementation 'com.github.esafirm.android-image-picker:imagepicker:2.4.3'
+    implementation 'com.github.esafirm.android-image-picker:rximagepicker:2.4.5'
+
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.android.libraries.places:places:3.2.0'
+
+    implementation 'com.google.maps:google-maps-services:0.18.0'
+    implementation 'com.karumi:dexter:6.2.3'
+
+}

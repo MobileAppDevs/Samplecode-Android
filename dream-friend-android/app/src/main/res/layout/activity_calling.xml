@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/_161616"
+        tools:context=".ui.home.activities.CallingActivity">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivUserProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_dummy_user_img"
+            android:layout_marginTop="124dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CornerSize50Percent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/merriweather_sans_semi_bold"
+            android:text="Dream Friend"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sivUserProfile" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:text="audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/merriweather_sans_regular"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivAccept"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_call_accept"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivDecline"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_call_decline"
+            android:layout_marginStart="60dp"
+            android:layout_marginBottom="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:text="Swipe up to answer"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/sk_modernist_regular"
+            android:textColor="@color/color_C4C4C4"
+            app:layout_constraintTop_toBottomOf="@id/ivAccept"
+            app:layout_constraintEnd_toEndOf="@id/ivAccept"
+            app:layout_constraintStart_toStartOf="@id/ivAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:text="Decline"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/sk_modernist_regular"
+            android:textColor="@color/color_C4C4C4"
+            app:layout_constraintTop_toBottomOf="@id/ivDecline"
+            app:layout_constraintEnd_toEndOf="@id/ivDecline"
+            app:layout_constraintStart_toStartOf="@id/ivDecline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

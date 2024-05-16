@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+<androidx.appcompat.widget.LinearLayoutCompat
+android:layout_width="match_parent"
+android:layout_height="wrap_content">
+
+<com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/ivProfile"
+    android:layout_marginVertical="10dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="16dp"
+    android:scaleType="fitXY"
+    android:src="@drawable/like_ic_bg"
+    app:shapeAppearanceOverlay="@style/CornersRound10"
+    android:layout_width="54dp"
+    android:layout_height="54dp"/>
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/tvName"
+    android:text="Name"
+    android:fontFamily="@font/merriweather_sans_medium"
+    android:paddingEnd="20dp"
+    android:paddingStart="0dp"
+    android:textSize="18sp"
+    android:textColor="@color/black"
+    android:gravity="center_vertical"
+    android:layout_weight="1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvUnblock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/merriweather_sans_regular"
+        android:textAllCaps="true"
+        android:text="unblock"
+        android:layout_gravity="center"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/black_rounded_border_5dp"
+        android:paddingHorizontal="3dp"
+        android:paddingVertical="3dp"
+        android:textSize="11dp"
+        android:textColor="@color/color_161616"/>
+</androidx.appcompat.widget.LinearLayoutCompat>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_D4D4D4"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

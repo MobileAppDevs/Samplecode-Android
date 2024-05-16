@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvPrimaryText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/merriweather_sans_regular"
+        android:textSize="16sp"
+        android:drawableStart="@drawable/new_ic_location"
+        android:layout_marginBottom="2dp"
+        android:textColor="@color/color_161616"
+        android:text="primary text"/>
+    <TextView
+        android:id="@+id/tvSecondaryText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/merriweather_sans_regular"
+        android:textSize="14sp"
+        android:paddingStart="20dp"
+       android:layout_marginBottom="10dp"
+        android:textColor="@color/color_949494"
+        android:text="primary text"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_D4D4D4"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
