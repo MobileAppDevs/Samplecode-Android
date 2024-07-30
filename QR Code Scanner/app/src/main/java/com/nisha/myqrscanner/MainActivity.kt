@@ -18,6 +18,10 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
 
+        initSetup()
+    }
+
+    private fun initSetup() {
         //set up the binding viewModel
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
