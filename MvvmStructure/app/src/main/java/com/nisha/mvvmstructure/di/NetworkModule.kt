@@ -80,8 +80,7 @@ class NetworkModule {
     fun provideHeaderInterceptor(): Interceptor {
         return Interceptor {
             val requestBuilder = it.request().newBuilder()
-                .addHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3Y2U4ODI4N2JkMGMzYWUyOWFhNTM3MWJjNDExMWEyYSIsIm5iZiI6MTcyMjQyMjEyMi42NzcwMDgsInN1YiI6IjY2YWExMjNhOTM2YmRhZjMwYWNkMzIyZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0jSTIZzQ8cPbraDWHZPuPq7NCGBxIygOTeY3yJQ0_-I")
-            //TODO : Replace with your headers
+            //TODO : add with your headers
             it.proceed(requestBuilder.build())
         }
     }
