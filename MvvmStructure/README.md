@@ -67,15 +67,34 @@ Add these dependencies to your `build.gradle` file.
 ### Remote Data Source
 
 Define your API endpoints in an interface:
-kotlin interface ApiService { @GET("endpoint") suspend fun getData(): Response<DataModel> }
+   ```kotlin
+interface ApiService { 
+    @GET("endpoint") 
+    suspend fun getData(): Response<DataModel> 
+}
+```
 ### Repository
 
 Create a repository to manage data operations:
-kotlin class DataRepository(private val apiService: ApiService) { suspend fun fetchData(): DataModel { val response = apiService.getData()  if (response.isSuccessful)  { return response.body()!! } else { throw Exception("Error fetching data") } } }
+   ```kotlin
+class DataRepository(private val apiService: ApiService) { 
+    suspend fun fetchData(): DataModel { 
+        val response = apiService.getData()  
+        if (response.isSuccessful)  { 
+            return response.body()!! 
+        } else { throw Exception("Error fetching data") } 
+    } 
+}
+```
 ### Network Constants
 
 Define constants for network configurations:
-kotlin object NetworkConstants { const val BASE_URL = "https://api.example. com/ "  const val TIMEOUT = 60L }
+   ```kotlin
+    object NetworkConstants { 
+        const val BASE_URL = "https://api.example. com/ "  
+    const val TIMEOUT = 60L 
+    }
+```
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request for review.
