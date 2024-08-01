@@ -7,7 +7,6 @@ This project demonstrates the MVVM (Model-View-ViewModel) architectural pattern 
 - [Features](#features)
 - [Architecture](#architecture)
 - [Setup](#setup)
-- [Project Structure](#project-structure)
 - [Key Components](#key-components)
 - [Dependencies](#dependencies)
 - [Usage](#usage)
