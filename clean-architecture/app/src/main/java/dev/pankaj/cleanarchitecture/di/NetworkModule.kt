@@ -28,10 +28,10 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 class NetworkModule {
 
-    private val READ_TIMEOUT = 30
-    private val WRITE_TIMEOUT = 30
-    private val CONNECTION_TIMEOUT = 10
-    private val CACHE_SIZE_BYTES = 10 * 1024 *1024L
+    private val readTimeout = 30
+    private val writeTimeout = 30
+    private val connectionTimeout = 10
+    private val cacheSizeBytes = 10 * 1024 *1024L
 
     /**
      * Provides the application instance.
@@ -73,9 +73,9 @@ class NetworkModule {
         cache: Cache
     ): OkHttpClient {
         val okHttpClientBuilder = OkHttpClient().newBuilder()
-        okHttpClientBuilder.connectTimeout(CONNECTION_TIMEOUT.toLong(), TimeUnit.SECONDS)
-        okHttpClientBuilder.readTimeout(READ_TIMEOUT.toLong(), TimeUnit.SECONDS)
-        okHttpClientBuilder.writeTimeout(WRITE_TIMEOUT.toLong(), TimeUnit.SECONDS)
+        okHttpClientBuilder.connectTimeout(connectionTimeout.toLong(), TimeUnit.SECONDS)
+        okHttpClientBuilder.readTimeout(readTimeout.toLong(), TimeUnit.SECONDS)
+        okHttpClientBuilder.writeTimeout(writeTimeout.toLong(), TimeUnit.SECONDS)
         okHttpClientBuilder.cache(cache)
         okHttpClientBuilder.addInterceptor(headerInterceptor)
         return okHttpClientBuilder.build()
@@ -106,7 +106,7 @@ class NetworkModule {
     @Singleton
     internal fun provideCache(context: Context): Cache {
         val httpCacheDirectory = File(context.cacheDir.absolutePath, "HttpCache")
-        return Cache(httpCacheDirectory, CACHE_SIZE_BYTES)
+        return Cache(httpCacheDirectory, cacheSizeBytes)
     }
 
     /**

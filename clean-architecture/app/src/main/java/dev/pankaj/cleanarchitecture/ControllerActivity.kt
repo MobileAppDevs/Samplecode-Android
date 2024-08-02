@@ -160,18 +160,6 @@ class ControllerActivity : AppCompatActivity() {private lateinit var binding: Ac
         }
         return super.onOptionsItemSelected(item)
     }
-
-    /**
-     * Updates the cart badge count.
-     */
-    private fun updateCartBadge(count: Int) {
-        /*  if (count > 0) {
-              cartBadge.text = count.toString()
-              cartBadge.visibility = View.VISIBLE
-          } else {
-              cartBadge.visibility = View.GONE
-          }*/
-    }
 }
 
 

@@ -44,18 +44,18 @@ android {
             dimension = "environment"
             namespace = "dev.pankaj.cleanarchitecture.dev"
             applicationId = "dev.pankaj.cleanarchitecture.dev"
-            buildConfigField("String", "BASE_URL", "\"https://fakestoreapi.com\"")
+            buildConfigField("String", "BASE_URL", "\"Your_base_url_here\"")
             buildConfigField("String", "APP_VERSION", "\"1.0-dev\"")
-            buildConfigField("String", "FIREBASE_CONFIG_FILE", "\"google-services-dev.json\"")
+            buildConfigField("String", "FIREBASE_CONFIG_FILE", "\"your_firebase_config_file.development.json\"")
         }
 
         create("production") {
             dimension = "environment"
             namespace = "dev.pankaj.cleanarchitecture"
             applicationId = "dev.pankaj.cleanarchitecture"
-            buildConfigField("String", "BASE_URL", "\"https://production.api.com\"")
+            buildConfigField("String", "BASE_URL", "\"Your_base_url_here\"")
             buildConfigField("String", "APP_VERSION", "\"1.0\"")
-            buildConfigField("String", "FIREBASE_CONFIG_FILE", "\"google-services.json\"")
+            buildConfigField("String", "FIREBASE_CONFIG_FILE", "\"your_firebase_config_file_production.json\"")
         }
     }
 }

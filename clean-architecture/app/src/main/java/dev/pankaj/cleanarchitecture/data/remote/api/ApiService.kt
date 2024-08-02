@@ -16,6 +16,6 @@ interface ApiService {
      * @param loginRequest The LoginRequest object containing the user's credentials.
      * @return A Response object containing the LoginResponse from the server.
      */
-    @POST("auth/login")
+    @POST("YOUR_END_POINT_HERE")
     suspend fun login(@Body loginRequest: LoginRequest): Response<LoginResponse>
 }

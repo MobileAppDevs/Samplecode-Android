@@ -44,7 +44,7 @@ class AuthViewModel(
                     _loginResponse.value = Result.Loading(false) // Indicate loading finished
                 }
             } else {
-                _loginResponse.value = Result.Message("No Internet connection") // Show error message
+                _loginResponse.value = Result.Message(NO_NETWORK_CONNECTION) // Show error message
                 _loginResponse.value = Result.Loading(false) // Indicate loading finished
             }
         }
