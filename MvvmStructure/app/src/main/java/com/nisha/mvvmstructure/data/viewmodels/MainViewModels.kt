@@ -2,7 +2,7 @@ package com.nisha.mvvmstructure.data.viewmodels
 
 import android.app.Application
 import androidx.lifecycle.*
-import com.nisha.mvvmstructure.data.model.MovieResponse
+import com.nisha.mvvmstructure.data.model.Response
 import com.nisha.mvvmstructure.data.repository.MainRepository
 import com.nisha.mvvmstructure.utils.NetworkResult
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -18,11 +18,11 @@ class MainViewModels @Inject constructor(
     /**
      * testing live data
      * */
-    private val _response: MutableLiveData<NetworkResult<MovieResponse>> = MutableLiveData()
-    val response: LiveData<NetworkResult<MovieResponse>> = _response
+    private val _response: MutableLiveData<NetworkResult<Response>> = MutableLiveData()
+    val response: LiveData<NetworkResult<Response>> = _response
 
-    fun fetchMovieResponse() = viewModelScope.launch {
-        repository.getMovieList().collect { values ->
+    fun fetchDetailsResponse() = viewModelScope.launch {
+        repository.getList().collect { values ->
             _response.value = values
         }
     }

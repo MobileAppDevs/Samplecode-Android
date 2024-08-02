@@ -1,6 +1,6 @@
 package com.nisha.mvvmstructure.data.repository
 
-import com.nisha.mvvmstructure.data.model.MovieResponse
+import com.nisha.mvvmstructure.data.model.Response
 import com.nisha.mvvmstructure.data.remote.RemoteDataSource
 import com.nisha.mvvmstructure.utils.BaseApiResponse
 import com.nisha.mvvmstructure.utils.NetworkResult
@@ -19,9 +19,9 @@ class MainRepository @Inject constructor(
     /**
      * Demo repository function
      * */
-    suspend fun getMovieList(): Flow<NetworkResult<MovieResponse>> {
+    suspend fun getList(): Flow<NetworkResult<Response>> {
         return flow {
-            emit(safeApiCall { remoteDataSource.getMovieList() })
+            emit(safeApiCall { remoteDataSource.getList() })
         }.flowOn(Dispatchers.IO)
     }
 

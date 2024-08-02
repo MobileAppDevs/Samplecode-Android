@@ -6,5 +6,5 @@ class RemoteDataSource @Inject constructor(private val webService: WebService) {
     /**
      * demo remote data source function call
      * */
-    suspend fun getMovieList() = webService.getMovieList()
+    suspend fun getList() = webService.getList()
 }

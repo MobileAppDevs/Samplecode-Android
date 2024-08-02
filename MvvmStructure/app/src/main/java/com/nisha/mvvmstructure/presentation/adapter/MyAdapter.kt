@@ -4,14 +4,13 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.nisha.mvvmstructure.data.model.MovieListItem
-import com.nisha.mvvmstructure.databinding.MovieItemLayoutBinding
-import com.nisha.mvvmstructure.utils.Utils
+import com.nisha.mvvmstructure.data.model.ListItem
+import com.nisha.mvvmstructure.databinding.DetailsItemLayoutBinding
 
-class MovieAdapter: RecyclerView.Adapter<MovieAdapter.CustomViewHolder>() {
+class MyAdapter: RecyclerView.Adapter<MyAdapter.CustomViewHolder>() {
 
     // List to hold the movie items
-    private var list: List<MovieListItem> = mutableListOf()
+    private var list: List<ListItem> = mutableListOf()
 
     // Called when RecyclerView needs a new ViewHolder of the given type to represent an item
     override fun onCreateViewHolder(
@@ -25,7 +24,7 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.CustomViewHolder>() {
              * todo: replace with your layout
              * */
 
-            MovieItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            DetailsItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         )
     }
 
@@ -40,22 +39,18 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.CustomViewHolder>() {
     override fun getItemCount(): Int = list.size
 
     // ViewHolder class to hold the view for each movie item
-    class CustomViewHolder(private val movie: MovieItemLayoutBinding) :
-        RecyclerView.ViewHolder(movie.root) {
+    class CustomViewHolder(private val detailBinding: DetailsItemLayoutBinding) :
+        RecyclerView.ViewHolder(detailBinding.root) {
         // Bind the movie item data to the views
-        fun bind(item: MovieListItem) {
-            // Load the image using a utility function
-            Utils.loadImage(this.movie.ivImage, "https://image.tmdb.org/t/p/w500" + item.posterPath)
-            // Set the description text
-            this.movie.tvDescription.text = item.overview
-            // Set the title text
-            this.movie.tvTitle.text = item.title
+        fun bind(item: ListItem) {
+            // Set the item
+            this.detailBinding.tvTitle.text = item.listItem1
         }
     }
 
     // Function to update the data in the adapter
     @SuppressLint("NotifyDataSetChanged")
-    fun setData(mList: List<MovieListItem>) {
+    fun setData(mList: List<ListItem>) {
         // Set the new list of movies
         this.list = mList
         // Notify the adapter that the data set has changed so it can update the views

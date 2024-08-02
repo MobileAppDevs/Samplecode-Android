@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import com.nisha.mvvmstructure.databinding.ActivityMainBinding
-import com.nisha.mvvmstructure.presentation.adapter.MovieAdapter
+import com.nisha.mvvmstructure.presentation.adapter.MyAdapter
 import com.nisha.mvvmstructure.utils.NetworkResult
 import com.nisha.mvvmstructure.utils.Utils.progressDialog
 import com.nisha.mvvmstructure.data.viewmodels.MainViewModels
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     // Adapter for the RecyclerView
-    private var adapter: MovieAdapter? = null
+    private var adapter: MyAdapter? = null
 
     // Progress dialog for showing loading state
     private var pDialog: Dialog? = null
@@ -37,24 +37,24 @@ class MainActivity : AppCompatActivity() {
         pDialog = progressDialog()
 
         setAdapter()
-        fetchMovies()
+        fetchDetails()
         initObserver()
     }
 
     // Function to set up the adapter for the RecyclerView
     private fun setAdapter() {
         // Initialize the adapter
-        adapter = MovieAdapter()
+        adapter = MyAdapter()
         // Set the adapter to the RecyclerView
         binding.rvMovies.adapter = adapter
     }
 
-    // Function to fetch movies from the ViewModel
-    private fun fetchMovies() {
+    // Function to fetch details from the ViewModel
+    private fun fetchDetails() {
         // Show the progress dialog
         pDialog?.show()
         // Fetch the movie response from the ViewModel
-        viewModel.fetchMovieResponse()
+        viewModel.fetchDetailsResponse()
     }
 
     // Function to initialize observers for LiveData
