@@ -1,3 +1,5 @@
+[![Swipe](https://freeiconshop.com/wp-content/uploads/edd/play-flat.png)](https://www.dropbox.com/scl/fi/k94ge4okzorwcqgpbsmyq/swipe.webm?rlkey=rmwqwm2kmjxbup9qh6dpiufvv&st=wpaf2khd&dl=0)
+
 # Tinder-Like Swipe View
 
 This project demonstrates a simple Tinder-like swipe view implementation for Android using `ViewPager2`. Users can swipe left or right to interact with items, and the view provides visual feedback during the swipe gesture.
