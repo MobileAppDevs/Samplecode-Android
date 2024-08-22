@@ -1,4 +1,6 @@
-[![Swipe](https://freeiconshop.com/wp-content/uploads/edd/play-flat.png)](https://www.dropbox.com/scl/fi/k94ge4okzorwcqgpbsmyq/swipe.webm?rlkey=rmwqwm2kmjxbup9qh6dpiufvv&st=wpaf2khd&dl=0)
+![Demo](
+https://www.dropbox.com/scl/fi/3oe53gpvwm36kmgszecn6/swipe.gif?rlkey=tdqh5njbkhusoivu9x2yup6rz&st=dyhp72sx&dl=0
+)
 
 # Tinder-Like Swipe View
 
