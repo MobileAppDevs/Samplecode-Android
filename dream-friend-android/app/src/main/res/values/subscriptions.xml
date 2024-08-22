@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="license_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhkr06sI5pxagDyilCbhz8xVLMb04Mc4tDQoGPYYUCGrU2gRWpPvjEEg3oNPCS9sU4dr8WpfyJWFPzxtZ2AQphRIRZ0dAJyaz5SKnYWQAXMSD53AWxqcKtMRjz0gnAidT83/fjGl48N+OSKMeCidatMV7bnQdQ0mLVh9kWeLPxk0gUKjIsZEew623j9bar2EQb6sTqOEMYx6fRqva1UYYKYuV0OguQYbmvY2DMHDrxBnr+s5jqgy1+CZL0caSJNmGveXp59hDS+gupzB3Zkx2OKm6lD0Tsx3KmXv3N/dI1UuVtnMI/7GtUQSgwwqLADy3+/6FAPZMM3DwqYDj7rnlDwIDAQAB</string>
-    <string name="standardProductID">monthlySubscribe</string>
-    <string name="popularProductID">popularSubscribe</string>
-    <string name="goldProductID">goldSubscribe</string>
-</resources>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <array name="age_range_slider_values">
-        <item>20</item>
-        <item>70</item>
-    </array>
-</resources>

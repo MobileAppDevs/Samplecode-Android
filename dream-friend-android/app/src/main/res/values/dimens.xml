@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <!-- common dimens-->
-    <dimen name="_common_padding_horizontal">20dp</dimen>
-    <dimen name="_common_cr_edit_field">10dp</dimen>
-    <dimen name="_common_separator">1.5dp</dimen>
-
-</resources>
