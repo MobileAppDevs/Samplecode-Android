@@ -1,6 +1,4 @@
-# Overview
-
-![Overview](https://github.com/MobileAppDevs/Samplecode-Android/tree/master/Swipe/images/swipe.gif)
+![Demo](https://www.dropbox.com/scl/fi/3oe53gpvwm36kmgszecn6/swipe.gif?rlkey=tdqh5njbkhusoivu9x2yup6rz&st=dyhp72sx&dl=0)
 
 # Tinder-Like Swipe View
 
